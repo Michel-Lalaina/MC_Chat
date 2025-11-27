@@ -10,10 +10,11 @@ export default function LoginPage() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    if (!name.trim()) return;
-    setUsername(name);
-    navigate("/chat");
-  };
+  if (!name.trim()) return;
+  setUsername(name);
+  navigate("/ChatPage");
+};
+
 
   return (
     <div className="w-screen flex items-center justify-center h-screen relative overflow-hidden">

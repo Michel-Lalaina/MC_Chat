@@ -1,15 +1,12 @@
-// import ArchitectureTree from "./components/ArchitectureTree";
+
+import { Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 
 function App() {
-
   return (
-
-    <div className="flex">
-    <LoginPage/>
-    {/* <ChatPage/> */}
-    </div>
-
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+    </Routes>
   );
 }
 

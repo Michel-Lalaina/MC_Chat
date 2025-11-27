@@ -3,6 +3,7 @@ import MessageInput from "../components/MessageInput";
 import UserList from "../components/UserList";
 
 export default function ChatPage() {
+  
   return (
     <div className="grid grid-cols-4 h-screen">
       
