@@ -10,6 +10,7 @@ export default function LoginPage() {
   const navigate = useNavigate();
 
 
+
   return (
     <div className="w-screen flex items-center justify-center h-screen relative overflow-hidden">
       {/* fond gradient animé */}
@@ -38,7 +39,29 @@ export default function LoginPage() {
           onChange={(e) => setName(e.target.value)}
         />
 
-        <Button
+<Button
+  variant="contained"
+  fullWidth
+  sx={{
+    mt: 3,
+    py: 1.2,
+    borderRadius: "14px",
+    fontWeight: "bold",
+    fontSize: "1rem",
+    textTransform: "none",
+    transition: "0.25s",
+    background: "linear-gradient(to right, #ff4dff, #6a5af9)",
+    "&:hover": {
+      transform: "scale(1.03)",
+      background: "linear-gradient(to right, #ff3bff, #5948f7)",
+    },
+  }}
+  onClick={() => navigate("/chatpage")}
+>
+  Entrer dans le chat
+</Button>
+
+        {/* <Button
           variant="contained"
           fullWidth
           sx={{
@@ -57,7 +80,7 @@ export default function LoginPage() {
           }}
         >
           Entrer dans le chat
-        </Button>
+        </Button> */}
       </div>
 
       {/* animations */}
