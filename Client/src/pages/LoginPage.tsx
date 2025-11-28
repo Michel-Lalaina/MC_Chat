@@ -9,12 +9,6 @@ export default function LoginPage() {
   const { setUsername } = useUser();
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-  if (!name.trim()) return;
-  setUsername(name);
-  navigate("/ChatPage");
-};
-
 
   return (
     <div className="w-screen flex items-center justify-center h-screen relative overflow-hidden">
@@ -47,7 +41,6 @@ export default function LoginPage() {
         <Button
           variant="contained"
           fullWidth
-          onClick={handleLogin}
           sx={{
             mt: 3,
             py: 1.2,
