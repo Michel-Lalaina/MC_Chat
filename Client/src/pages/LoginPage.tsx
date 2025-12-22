@@ -10,6 +10,12 @@ export default function LoginPage() {
   const navigate = useNavigate();
 
 
+  const handleLogin = () => {
+    if (!name.trim()) return;
+    setUsername(name);
+    navigate("/chatpage");
+  };
+
 
   return (
     <div className="w-screen flex items-center justify-center h-screen relative overflow-hidden">
@@ -56,31 +62,11 @@ export default function LoginPage() {
               background: "linear-gradient(to right, #ff3bff, #5948f7)",
             },
           }}
-          onClick={() => navigate("/chatpage")}
+            onClick={handleLogin}
         >
           Entrer dans le chat
         </Button>
 
-        {/* <Button
-          variant="contained"
-          fullWidth
-          sx={{
-            mt: 3,
-            py: 1.2,
-            borderRadius: "14px",
-            fontWeight: "bold",
-            fontSize: "1rem",
-            textTransform: "none",
-            transition: "0.25s",
-            background: "linear-gradient(to right, #ff4dff, #6a5af9)",
-            "&:hover": {
-              transform: "scale(1.03)",
-              background: "linear-gradient(to right, #ff3bff, #5948f7)",
-            },
-          }}
-        >
-          Entrer dans le chat
-        </Button> */}
       </div>
 
       {/* animations */}
